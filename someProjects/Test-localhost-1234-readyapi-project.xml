@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="57597405-185a-4b41-b31e-cd9c19702b30" created="2.8.0" activeEnvironment="Default environment"
-                    name="Test localhost 1234" resourceRoot="" updated="2.8.0 2019-07-23T17:43:45Z"
-                    xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="57597405-185a-4b41-b31e-cd9c19702b30" created="2.8.0" activeEnvironment="Default environment" name="Test localhost 1234" resourceRoot="" updated="3.1.0 2020-02-04T16:09:20Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
     <con:settings/>
-    <con:interface xsi:type="con:RestService" id="2b9e0289-05d6-4a74-ab5e-1434e2aba4bb"
-                   wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:1234" type="rest"
-                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:interface xsi:type="con:RestService" id="2b9e0289-05d6-4a74-ab5e-1434e2aba4bb" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:1234" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <con:settings/>
         <con:definitionCache/>
         <con:endpoints>
@@ -26,43 +22,31 @@
                 <con:request name="Request 1" id="8b5061d1-caa1-47b3-9665-9d0b908e24fe" mediaType="application/json">
                     <con:settings/>
                     <con:endpoint>http://localhost:1234</con:endpoint>
-                    <con:parameters/>
+                    <con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/>
                 </con:request>
             </con:method>
         </con:resource>
     </con:interface>
     <con:testSuite id="ec338374-8e12-4fea-8b04-9c3a9fd5dd82" name="http://localhost:1234 TestSuite">
         <con:settings/>
-        <con:runType>SEQUENTIAL</con:runType>
-        <con:testCase id="de46c96c-7ac7-4270-b19e-acf2e78d1e0b" discardOkResults="true" failOnError="true"
-                      failTestCaseOnErrors="true" keepSession="false" name="http://localhost:1234 TestCase 1"
-                      searchProperties="true" timeout="0">
+        <con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType>
+        <con:testCase id="de46c96c-7ac7-4270-b19e-acf2e78d1e0b" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="http://localhost:1234 TestCase 1" searchProperties="true" timeout="0">
             <con:settings/>
             <con:testStep type="restrequest" name="Request 1" id="b505e01f-bade-4f77-8e40-c43287b79b55">
                 <con:settings/>
-                <con:config service="http://localhost:1234" resourcePath="" methodName="" xsi:type="con:RestRequestStep"
-                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                    <con:restRequest name="Request 1" id="8b5061d1-caa1-47b3-9665-9d0b908e24fe"
-                                     mediaType="application/json">
+                <con:config service="http://localhost:1234" resourcePath="" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Request 1" id="8b5061d1-caa1-47b3-9665-9d0b908e24fe" mediaType="application/json">
                         <con:settings>
                             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
                         </con:settings>
                         <con:endpoint>http://localhost:1234</con:endpoint>
                         <con:request/>
                         <con:originalUri>http://localhost/</con:originalUri>
-                        <con:assertion type="Valid HTTP Status Codes" id="7ad86c41-5ed3-4c11-9822-c3ac8863b87b"
-                                       name="Valid HTTP Status Codes">
+                        <con:assertion type="Valid HTTP Status Codes" id="7ad86c41-5ed3-4c11-9822-c3ac8863b87b" name="Valid HTTP Status Codes">
                             <con:settings/>
-                            <con:configuration>
-                                <codes>200</codes>
-                            </con:configuration>
+                            <con:configuration><codes>200</codes></con:configuration>
                         </con:assertion>
-                        <con:assertion type="Response SLA Assertion" id="28504a77-0d7e-4467-ad8d-b54eed908c83"
-                                       name="Response SLA">
-                            <con:configuration>
-                                <SLA>200</SLA>
-                            </con:configuration>
-                        </con:assertion>
+                        
                         <con:credentials>
                             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
                             <con:authType>No Authorization</con:authType>
@@ -74,10 +58,10 @@
             </con:testStep>
             <con:properties/>
             <con:reportParameters/>
-        </con:testCase>
+        <con:tagId>abe9acd0-5564-4873-988e-7a4d6d1ea46b</con:tagId></con:testCase>
         <con:properties/>
         <con:reportParameters/>
-    </con:testSuite>
+    <con:tagId>292f8c61-3442-45fc-b17f-f056d3b75ad8</con:tagId></con:testSuite>
     <con:properties/>
     <con:wssContainer/>
     <con:databaseConnectionContainer/>
@@ -120,5 +104,5 @@
         </con:script>
     </con:eventHandlers>
     <con:authRepository/>
-    <con:tags/>
+    <con:tags><con:tag><con:id>abe9acd0-5564-4873-988e-7a4d6d1ea46b</con:id><con:name>testcasestagged</con:name></con:tag><con:tag><con:id>292f8c61-3442-45fc-b17f-f056d3b75ad8</con:id><con:name>testsuitestagged</con:name></con:tag></con:tags>
 </con:soapui-project>

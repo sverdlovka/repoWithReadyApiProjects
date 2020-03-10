@@ -30,7 +30,7 @@
     <con:testSuite id="ec338374-8e12-4fea-8b04-9c3a9fd5dd82" name="http://localhost:1234 TestSuite">
         <con:settings/>
         <con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType>
-        <con:testCase id="de46c96c-7ac7-4270-b19e-acf2e78d1e0b" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="http://localhost:1234 TestCase 1" searchProperties="true" timeout="0">
+        <con:testCase id="de46c96c-7ac7-4270-b19e-acf2e78d1e0b" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="The One With Passing Assertion" searchProperties="true" timeout="0">
             <con:settings/>
             <con:testStep type="restrequest" name="Request 1" id="b505e01f-bade-4f77-8e40-c43287b79b55">
                 <con:settings/>
@@ -58,11 +58,39 @@
             </con:testStep>
             <con:properties/>
             <con:reportParameters/>
-        <con:tagId>abe9acd0-5564-4873-988e-7a4d6d1ea46b</con:tagId></con:testCase>
-        <con:properties/>
+        <con:tagId>abe9acd0-5564-4873-988e-7a4d6d1ea46b</con:tagId><con:tagId>fa2a3149-30a4-445b-beec-ff6e5835e8db</con:tagId></con:testCase>
+        <con:testCase id="83358f0a-b327-47bd-8be4-4767acc250e5" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="The One With Failing Assertion" searchProperties="true" timeout="0">
+            <con:settings/>
+            <con:testStep type="restrequest" name="Request 1" id="efa044c6-5f4a-4d83-9273-1ec908787fb9">
+                <con:settings/>
+                <con:config service="http://localhost:1234" resourcePath="" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Request 1" id="8b5061d1-caa1-47b3-9665-9d0b908e24fe" mediaType="application/json">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:1234</con:endpoint>
+                        <con:request/>
+                        <con:originalUri>http://localhost/</con:originalUri>
+                        <con:assertion type="Valid HTTP Status Codes" id="7ad86c41-5ed3-4c11-9822-c3ac8863b87b" name="Valid HTTP Status Codes">
+                            <con:settings/>
+                            <con:configuration><codes>123</codes></con:configuration>
+                        </con:assertion>
+                        
+                        <con:credentials>
+                            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+            <con:reportParameters/>
+        <con:tagId>abe9acd0-5564-4873-988e-7a4d6d1ea46b</con:tagId><con:tagId>f1b1f3c4-9e7b-48fd-8f48-436fd2856e0e</con:tagId></con:testCase><con:properties/>
         <con:reportParameters/>
     <con:tagId>292f8c61-3442-45fc-b17f-f056d3b75ad8</con:tagId></con:testSuite>
-    <con:properties/>
+    <con:requirements/><con:properties/>
     <con:wssContainer/>
     <con:databaseConnectionContainer/>
     <con:jmsConnectionContainer/>
@@ -104,5 +132,5 @@
         </con:script>
     </con:eventHandlers>
     <con:authRepository/>
-    <con:tags><con:tag><con:id>abe9acd0-5564-4873-988e-7a4d6d1ea46b</con:id><con:name>testcasestagged</con:name></con:tag><con:tag><con:id>292f8c61-3442-45fc-b17f-f056d3b75ad8</con:id><con:name>testsuitestagged</con:name></con:tag></con:tags>
+    <con:tags><con:tag><con:id>abe9acd0-5564-4873-988e-7a4d6d1ea46b</con:id><con:name>testcasestagged</con:name></con:tag><con:tag><con:id>292f8c61-3442-45fc-b17f-f056d3b75ad8</con:id><con:name>testsuitestagged</con:name></con:tag><con:tag><con:id>fa2a3149-30a4-445b-beec-ff6e5835e8db</con:id><con:name>passing</con:name></con:tag><con:tag><con:id>f1b1f3c4-9e7b-48fd-8f48-436fd2856e0e</con:id><con:name>failing</con:name></con:tag></con:tags>
 </con:soapui-project>

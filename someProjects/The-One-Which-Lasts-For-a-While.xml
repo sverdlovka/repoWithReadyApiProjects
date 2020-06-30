@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="47f602d5-cbfe-4811-bd82-f1124f42b6f9" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="The One Which Lasts For a While" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+            <con:settings/>
+            <con:testStep type="delay" name="Wait 5 minutes" id="a92b01eb-8763-4a37-aad6-de9d3b44b429"><con:settings/><con:config><delay>300000</delay></con:config></con:testStep><con:testStep type="restrequest" name="Request 1" id="494ba5de-fbf6-4803-896b-1a6c49a0085b">
+                <con:settings/>
+                <con:config service="http://localhost:1234" resourcePath="" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Request 1" id="8b5061d1-caa1-47b3-9665-9d0b908e24fe" mediaType="application/json">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:1234</con:endpoint>
+                        <con:request/>
+                        <con:originalUri>http://localhost/</con:originalUri>
+                        <con:assertion type="Valid HTTP Status Codes" id="7ad86c41-5ed3-4c11-9822-c3ac8863b87b" name="Valid HTTP Status Codes">
+                            <con:settings/>
+                            <con:configuration><codes>123</codes></con:configuration>
+                        </con:assertion>
+
+                        <con:credentials>
+                            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+            <con:reportParameters/>
+            <con:tagId>abe9acd0-5564-4873-988e-7a4d6d1ea46b</con:tagId>
+            <con:tagId>f1b1f3c4-9e7b-48fd-8f48-436fd2856e0e</con:tagId>
+        </con:testCase>

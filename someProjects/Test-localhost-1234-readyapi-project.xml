@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="57597405-185a-4b41-b31e-cd9c19702b30" created="2.8.0" activeEnvironment="Default environment"
-                    name="Test localhost 1234" resourceRoot="" updated="3.1.0 2020-02-04T16:09:20Z"
-                    encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="57597405-185a-4b41-b31e-cd9c19702b30" created="2.8.0" activeEnvironment="Default environment" name="Test localhost 1234" resourceRoot="" updated="3.7.0 2021-03-30T19:14:40Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
     <con:settings/>
-    <con:interface xsi:type="con:RestService" id="2b9e0289-05d6-4a74-ab5e-1434e2aba4bb"
-                   wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:1234" type="rest"
-                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:interface xsi:type="con:RestService" id="2b9e0289-05d6-4a74-ab5e-1434e2aba4bb" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:1234" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <con:settings/>
         <con:definitionCache/>
         <con:endpoints>
@@ -41,24 +37,19 @@
         <con:settings/>
         <con:savedRecentRuns>1</con:savedRecentRuns>
         <con:runType>SEQUENTIAL</con:runType>
-        <con:testCase id="de46c96c-7ac7-4270-b19e-acf2e78d1e0b" discardOkResults="true" failOnError="true"
-                      failTestCaseOnErrors="true" keepSession="false" name="The One With Passing Assertion"
-                      searchProperties="true" timeout="0">
+        <con:testCase id="de46c96c-7ac7-4270-b19e-acf2e78d1e0b" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="The One With Passing Assertion" searchProperties="true" timeout="0">
             <con:settings/>
-            <con:testStep type="restrequest" name="Request 1" id="b505e01f-bade-4f77-8e40-c43287b79b55">
+            <con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="Request 1" id="b505e01f-bade-4f77-8e40-c43287b79b55">
                 <con:settings/>
-                <con:config service="http://localhost:1234" resourcePath="" methodName="" xsi:type="con:RestRequestStep"
-                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                    <con:restRequest name="Request 1" id="8b5061d1-caa1-47b3-9665-9d0b908e24fe"
-                                     mediaType="application/json">
+                <con:config service="http://localhost:1234" resourcePath="" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Request 1" id="8b5061d1-caa1-47b3-9665-9d0b908e24fe" mediaType="application/json">
                         <con:settings>
                             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
                         </con:settings>
                         <con:endpoint>http://localhost:1234</con:endpoint>
                         <con:request/>
                         <con:originalUri>http://localhost/</con:originalUri>
-                        <con:assertion type="Valid HTTP Status Codes" id="7ad86c41-5ed3-4c11-9822-c3ac8863b87b"
-                                       name="Valid HTTP Status Codes">
+                        <con:assertion type="Valid HTTP Status Codes" id="7ad86c41-5ed3-4c11-9822-c3ac8863b87b" name="Valid HTTP Status Codes">
                             <con:settings/>
                             <con:configuration>
                                 <codes>200</codes>
@@ -74,21 +65,16 @@
                     </con:restRequest>
                 </con:config>
             </con:testStep>
-            <con:properties/>
+            <con:testStep type="delay" name="delay 30 sek" id="057b150c-2c0e-4a60-af09-86909acbe57e"><con:settings/><con:config><delay>30000</delay></con:config></con:testStep><con:properties/>
             <con:reportParameters/>
-            <con:securityTest id="6662ae12-9abe-4985-82d5-1ed9f3648c35"
-                              testCaseId="de46c96c-7ac7-4270-b19e-acf2e78d1e0b" name="SecurityTest 1"
-                              failSecurityTestOnScanErrors="true">
+            <con:securityTest id="6662ae12-9abe-4985-82d5-1ed9f3648c35" testCaseId="de46c96c-7ac7-4270-b19e-acf2e78d1e0b" name="SecurityTest 1" failSecurityTestOnScanErrors="true">
                 <con:settings/>
                 <con:testStepSecurityTest>
                     <con:testStepId>b505e01f-bade-4f77-8e40-c43287b79b55</con:testStepId>
-                    <con:testStepSecurityScan type="BoundaryScan" name="Boundary Scan"
-                                              id="26c05921-8713-40ec-9243-7c50b1e18513" applyForFailedStep="false"
-                                              disabled="false" runOnlyOnce="true">
+                    <con:testStepSecurityScan type="BoundaryScan" name="Boundary Scan" id="26c05921-8713-40ec-9243-7c50b1e18513" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
                         <con:settings/>
                         <con:config xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                        <con:assertion type="Sensitive Information Exposure" id="e28a8d2c-8664-425c-9b48-c7eaea82e57a"
-                                       name="Sensitive Information Exposure">
+                        <con:assertion type="Sensitive Information Exposure" id="e28a8d2c-8664-425c-9b48-c7eaea82e57a" name="Sensitive Information Exposure">
                             <con:configuration/>
                         </con:assertion>
                         <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -98,12 +84,9 @@
                             <con:delay>100</con:delay>
                         </con:executionStrategy>
                     </con:testStepSecurityScan>
-                    <con:testStepSecurityScan type="CrossSiteScriptingScan" name="Cross Site Scripting"
-                                              id="41ac5ccb-1476-48c6-a235-42e1c990fea0" applyForFailedStep="false"
-                                              disabled="false" runOnlyOnce="true">
+                    <con:testStepSecurityScan type="CrossSiteScriptingScan" name="Cross Site Scripting" id="41ac5ccb-1476-48c6-a235-42e1c990fea0" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
                         <con:settings/>
-                        <con:config xsi:type="con:CrossSiteScriptingScan"
-                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <con:config xsi:type="con:CrossSiteScriptingScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <con:parameterExposureStrings>&lt;PLAINTEXT></con:parameterExposureStrings>
                             <con:parameterExposureStrings>
                                 ';alert(String.fromCharCode(88,83,83))//\';alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//\";alert(String.fromCharCode(88,83,83))//-->&lt;/SCRIPT>">'>&lt;SCRIPT>alert(String.fromCharCode(88,83,83))&lt;/SCRIPT>
@@ -125,12 +108,12 @@
                             </con:parameterExposureStrings>
                             <con:parameterExposureStrings>&lt;IMG SRC=javascript:alert(String.fromCharCode(88,83,83))>
                             </con:parameterExposureStrings>
-                            <con:parameterExposureStrings>
-                                <![CDATA[<IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>]]></con:parameterExposureStrings>
-                            <con:parameterExposureStrings>
-                                <![CDATA[<IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>]]></con:parameterExposureStrings>
-                            <con:parameterExposureStrings>
-                                <![CDATA[<IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>]]></con:parameterExposureStrings>
+                            <con:parameterExposureStrings><![CDATA[
+                                <IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>]]></con:parameterExposureStrings>
+                            <con:parameterExposureStrings><![CDATA[
+                                <IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>]]></con:parameterExposureStrings>
+                            <con:parameterExposureStrings><![CDATA[
+                                <IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>]]></con:parameterExposureStrings>
                             <con:parameterExposureStrings>&lt;IMG SRC="jav ascript:alert('XSS');">
                             </con:parameterExposureStrings>
                             <con:parameterExposureStrings>&lt;IMG SRC="jav&amp;#x09;ascript:alert('XSS');">
@@ -268,13 +251,13 @@
                             <con:parameterExposureStrings>
                                 a="get";b="URL(\"";c="javascript:";d="alert('XSS');\")";eval(a+b+c+d);
                             </con:parameterExposureStrings>
-                            <con:parameterExposureStrings><![CDATA[<XML ID=I><X><C><![CDATA[<IMG SRC="javas]]]]>>
-                                <![CDATA[<![CDATA[cript:alert('XSS');">]]]]>>
-                                <![CDATA[</C></X></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>]]></con:parameterExposureStrings>
-                            <con:parameterExposureStrings>
-                                <![CDATA[<XML ID="xss"><I><B>&lt;IMG SRC="javas<!-- -->cript:alert('XSS')"&gt;</B></I></XML><SPAN DATASRC="#xss" DATAFLD="B" DATAFORMATAS="HTML"></SPAN>]]></con:parameterExposureStrings>
-                            <con:parameterExposureStrings>
-                                <![CDATA[<HTML><BODY><?xml:namespace prefix="t" ns="urn:schemas-microsoft-com:time"><?import namespace="t" implementation="#default#time2"><t:set attributeName="innerHTML" to="XSS&lt;SCRIPT DEFER&gt;alert(&quot;XSS&quot;)&lt;/SCRIPT&gt;"></BODY></HTML>]]></con:parameterExposureStrings>
+                            <con:parameterExposureStrings><![CDATA[<XML ID=I><X><C><![CDATA[<IMG SRC="javas]]]]>><![CDATA[
+                                <![CDATA[cript:alert('XSS');">]]]]>><![CDATA[
+                                </C></X></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>]]></con:parameterExposureStrings>
+                            <con:parameterExposureStrings><![CDATA[
+                                <XML ID="xss"><I><B>&lt;IMG SRC="javas<!-- -->cript:alert('XSS')"&gt;</B></I></XML><SPAN DATASRC="#xss" DATAFLD="B" DATAFORMATAS="HTML"></SPAN>]]></con:parameterExposureStrings>
+                            <con:parameterExposureStrings><![CDATA[
+                                <HTML><BODY><?xml:namespace prefix="t" ns="urn:schemas-microsoft-com:time"><?import namespace="t" implementation="#default#time2"><t:set attributeName="innerHTML" to="XSS&lt;SCRIPT DEFER&gt;alert(&quot;XSS&quot;)&lt;/SCRIPT&gt;"></BODY></HTML>]]></con:parameterExposureStrings>
                             <con:parameterExposureStrings>&lt;SCRIPT SRC="http://soapui.org/xss.jpg">&lt;/SCRIPT>
                             </con:parameterExposureStrings>
                             <con:parameterExposureStrings>&lt;? echo('&lt;SCR)';echo('IPT>alert("XSS")&lt;/SCRIPT>');
@@ -307,12 +290,10 @@
                                 SRC="http://soapui.org/xss.js">&lt;/SCRIPT>
                             </con:parameterExposureStrings>
                         </con:config>
-                        <con:assertion type="Sensitive Information Exposure" id="99ece234-aa8f-45f6-8cf5-817cbb89ac20"
-                                       name="Sensitive Information Exposure">
+                        <con:assertion type="Sensitive Information Exposure" id="99ece234-aa8f-45f6-8cf5-817cbb89ac20" name="Sensitive Information Exposure">
                             <con:configuration/>
                         </con:assertion>
-                        <con:assertion type="CrosSiteScript" id="dc5768b7-54fb-49d0-916a-e9a28e743d75"
-                                       name="Cross Site Scripting Detection">
+                        <con:assertion type="CrosSiteScript" id="dc5768b7-54fb-49d0-916a-e9a28e743d75" name="Cross Site Scripting Detection">
                             <con:configuration/>
                         </con:assertion>
                         <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -322,33 +303,26 @@
                             <con:delay>100</con:delay>
                         </con:executionStrategy>
                     </con:testStepSecurityScan>
-                    <con:testStepSecurityScan type="FuzzingScan" name="Fuzzing Scan"
-                                              id="1c94d0f0-eb76-4843-b529-5c2eb1f5c344" applyForFailedStep="false"
-                                              disabled="false" runOnlyOnce="true">
+                    <con:testStepSecurityScan type="FuzzingScan" name="Fuzzing Scan" id="1c94d0f0-eb76-4843-b529-5c2eb1f5c344" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
                         <con:settings/>
                         <con:config xsi:type="con:FuzzerScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <con:minimal>5</con:minimal>
                             <con:maximal>15</con:maximal>
                             <con:numberOfRequest>100</con:numberOfRequest>
                         </con:config>
-                        <con:assertion type="Sensitive Information Exposure" id="b7562fe7-70e8-4008-b940-7a20cb314d68"
-                                       name="Sensitive Information Exposure">
+                        <con:assertion type="Sensitive Information Exposure" id="b7562fe7-70e8-4008-b940-7a20cb314d68" name="Sensitive Information Exposure">
                             <con:configuration/>
                         </con:assertion>
                         <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                         <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                        <con:executionStrategy xsi:nil="true" immutable="true"
-                                               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <con:executionStrategy xsi:nil="true" immutable="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <con:strategy>ALL_AT_ONCE</con:strategy>
                             <con:delay>100</con:delay>
                         </con:executionStrategy>
                     </con:testStepSecurityScan>
-                    <con:testStepSecurityScan type="InvalidTypesSecurityScan" name="Invalid Types"
-                                              id="f9f7b678-266f-4ccc-8e52-a036559c09ae" applyForFailedStep="false"
-                                              disabled="false" runOnlyOnce="true">
+                    <con:testStepSecurityScan type="InvalidTypesSecurityScan" name="Invalid Types" id="f9f7b678-266f-4ccc-8e52-a036559c09ae" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
                         <con:settings/>
-                        <con:config xsi:type="con:InvalidSecurityScan"
-                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <con:config xsi:type="con:InvalidSecurityScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <con:typesList>
                                 <con:type>3</con:type>
                                 <con:value>true</con:value>
@@ -451,8 +425,7 @@
                                 <con:value>SoapUI is the best</con:value>
                             </con:typesList>
                         </con:config>
-                        <con:assertion type="Sensitive Information Exposure" id="d7295f15-b6bd-4d22-b85a-55e6a2349beb"
-                                       name="Sensitive Information Exposure">
+                        <con:assertion type="Sensitive Information Exposure" id="d7295f15-b6bd-4d22-b85a-55e6a2349beb" name="Sensitive Information Exposure">
                             <con:configuration/>
                         </con:assertion>
                         <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -462,12 +435,9 @@
                             <con:delay>100</con:delay>
                         </con:executionStrategy>
                     </con:testStepSecurityScan>
-                    <con:testStepSecurityScan type="SQLInjectionScan" name="SQL Injection"
-                                              id="a1f4fa62-3dab-4c36-9d2f-e7f90b25d186" applyForFailedStep="false"
-                                              disabled="false" runOnlyOnce="true">
+                    <con:testStepSecurityScan type="SQLInjectionScan" name="SQL Injection" id="a1f4fa62-3dab-4c36-9d2f-e7f90b25d186" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
                         <con:settings/>
-                        <con:config xsi:type="con:SQLInjectionScan"
-                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <con:config xsi:type="con:SQLInjectionScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <con:sqlInjectionStrings>' or '1'='1</con:sqlInjectionStrings>
                             <con:sqlInjectionStrings>'--</con:sqlInjectionStrings>
                             <con:sqlInjectionStrings>1'</con:sqlInjectionStrings>
@@ -484,8 +454,7 @@
                             </con:sqlInjectionStrings>
                             <con:sqlInjectionStrings>test� UNION select 1, @@version, 1, 1;�</con:sqlInjectionStrings>
                         </con:config>
-                        <con:assertion type="Sensitive Information Exposure" id="1fb86474-7177-4e0e-b39a-8fa2a79af066"
-                                       name="Sensitive Information Exposure">
+                        <con:assertion type="Sensitive Information Exposure" id="1fb86474-7177-4e0e-b39a-8fa2a79af066" name="Sensitive Information Exposure">
                             <con:configuration/>
                         </con:assertion>
                         <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -495,9 +464,7 @@
                             <con:delay>100</con:delay>
                         </con:executionStrategy>
                     </con:testStepSecurityScan>
-                    <con:testStepSecurityScan type="XPathInjectionSecurityScan" name="XPath Injection"
-                                              id="f58d76c2-9fed-4f57-9267-e58d4f0757cf" applyForFailedStep="false"
-                                              disabled="false" runOnlyOnce="true">
+                    <con:testStepSecurityScan type="XPathInjectionSecurityScan" name="XPath Injection" id="f58d76c2-9fed-4f57-9267-e58d4f0757cf" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
                         <con:settings/>
                         <con:config xsi:type="con:XPathInjection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <con:xpathList>or name(//users/LoginID[1]) = 'LoginID' or 'a'='b</con:xpathList>
@@ -511,8 +478,7 @@
                             <con:xpathList>test�%20UNION%20select%201,%20@@version,%201,%201;�</con:xpathList>
                             <con:xpathList>test� UNION select 1, @@version, 1, 1;�</con:xpathList>
                         </con:config>
-                        <con:assertion type="Sensitive Information Exposure" id="b2d0db33-50db-474c-8d14-24147b5bd78f"
-                                       name="Sensitive Information Exposure">
+                        <con:assertion type="Sensitive Information Exposure" id="b2d0db33-50db-474c-8d14-24147b5bd78f" name="Sensitive Information Exposure">
                             <con:configuration/>
                         </con:assertion>
                         <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -522,20 +488,15 @@
                             <con:delay>100</con:delay>
                         </con:executionStrategy>
                     </con:testStepSecurityScan>
-                    <con:testStepSecurityProScan type="HttpMethodFuzzingScan" name="HTTP Method Fuzzing"
-                                                 id="51b7de23-a12f-422a-a0b4-4a9d59a77a0a" applyForFailedStep="false"
-                                                 disabled="false" runOnlyOnce="true">
+                    <con:testStepSecurityProScan type="HttpMethodFuzzingScan" name="HTTP Method Fuzzing" id="51b7de23-a12f-422a-a0b4-4a9d59a77a0a" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
                         <con:settings/>
-                        <con:config xsi:type="con:HttpMethodFuzzingScan"
-                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <con:config xsi:type="con:HttpMethodFuzzingScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <con:deselectedMethods/>
                         </con:config>
-                        <con:assertion type="Sensitive Information Exposure" id="dd40caac-feaa-4ea9-af94-36a69177ec4f"
-                                       name="Sensitive Information Exposure">
+                        <con:assertion type="Sensitive Information Exposure" id="dd40caac-feaa-4ea9-af94-36a69177ec4f" name="Sensitive Information Exposure">
                             <con:configuration/>
                         </con:assertion>
-                        <con:assertion type="Valid HTTP Status Codes" id="f35ea5e4-1308-4bf3-849d-7cfb7aba93f5"
-                                       name="Valid HTTP Status Codes">
+                        <con:assertion type="Valid HTTP Status Codes" id="f35ea5e4-1308-4bf3-849d-7cfb7aba93f5" name="Valid HTTP Status Codes">
                             <con:settings>
                                 <con:setting id="__LEVEL_">WARNING</con:setting>
                             </con:settings>
@@ -550,15 +511,11 @@
                             <con:delay>100</con:delay>
                         </con:executionStrategy>
                     </con:testStepSecurityProScan>
-                    <con:testStepSecurityProScan type="SensitiveFileSecurityScan" name="Sensitive Files Exposure"
-                                                 id="2ee3c853-af80-4feb-9563-3ae06ea1d10f" applyForFailedStep="false"
-                                                 disabled="false" runOnlyOnce="true">
+                    <con:testStepSecurityProScan type="SensitiveFileSecurityScan" name="Sensitive Files Exposure" id="2ee3c853-af80-4feb-9563-3ae06ea1d10f" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
                         <con:settings/>
-                        <con:config xsi:type="con:SensitiveFileSecurityScan"
-                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <con:config xsi:type="con:SensitiveFileSecurityScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/known_hosts"/>
-                            <con:sensitiveFile description="Sensitive SSH information"
-                                               fileName="/.ssh/authorized_keys"/>
+                            <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/authorized_keys"/>
                             <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_dsa"/>
                             <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_dsa.bak"/>
                             <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_dsa.old"/>
@@ -567,93 +524,47 @@
                             <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_rsa.bak"/>
                             <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_rsa.old"/>
                             <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_rsa~"/>
-                            <con:sensitiveFile description="May contain passwords or other sensitive information"
-                                               fileName="/.htaccess"/>
-                            <con:sensitiveFile description="May contain passwords or other sensitive information"
-                                               fileName="/.htaccess.bak"/>
-                            <con:sensitiveFile description="May contain passwords or other sensitive information"
-                                               fileName="/.htaccess.old"/>
-                            <con:sensitiveFile description="May contain passwords or other sensitive information"
-                                               fileName="/htaccess.txt"/>
-                            <con:sensitiveFile description="May contain passwords or other sensitive information"
-                                               fileName="/.htaccess~"/>
-                            <con:sensitiveFile description="May contain passwords or other sensitive information"
-                                               fileName="/.htpasswd"/>
-                            <con:sensitiveFile description="May contain passwords or other sensitive information"
-                                               fileName="/.htpasswd.bak"/>
-                            <con:sensitiveFile description="May contain passwords or other sensitive information"
-                                               fileName="/.htpasswd.old"/>
-                            <con:sensitiveFile description="May contain passwords or other sensitive information"
-                                               fileName="/.htpasswd~"/>
-                            <con:sensitiveFile
-                                    description="Usually reside in a users home directory on a Linux/UNIX machine"
-                                    fileName="/.bash_history"/>
-                            <con:sensitiveFile
-                                    description="Usually reside in a users home directory on a Linux/UNIX machine"
-                                    fileName="/.bashrc"/>
-                            <con:sensitiveFile
-                                    description="Usually reside in a users home directory on a Linux/UNIX machine"
-                                    fileName="/.history"/>
-                            <con:sensitiveFile
-                                    description="Usually reside in a users home directory on a Linux/UNIX machine"
-                                    fileName="/.profile"/>
-                            <con:sensitiveFile
-                                    description="Usually reside in a users home directory on a Linux/UNIX machine"
-                                    fileName="/.mysql_history"/>
-                            <con:sensitiveFile
-                                    description="Usually reside in a users home directory on a Linux/UNIX machine"
-                                    fileName="/~root"/>
-                            <con:sensitiveFile description="Contains info from SCM (git, svn...)"
-                                               fileName="/.git/config"/>
-                            <con:sensitiveFile description="Contains info from SCM (git, svn...)"
-                                               fileName="/.git/HEAD"/>
-                            <con:sensitiveFile description="Contains info from SCM (git, svn...)"
-                                               fileName="/.git/index"/>
-                            <con:sensitiveFile description="Contains info from SCM (git, svn...)"
-                                               fileName="/.svn/entries"/>
-                            <con:sensitiveFile description="Contains info from SCM (git, svn...)"
-                                               fileName="/.svn/wc.db"/>
-                            <con:sensitiveFile description="May tell what type of web server is hosting the service"
-                                               fileName="/pccsmysqladm/incs/dbconnect.inc"/>
-                            <con:sensitiveFile description="May tell what type of web server is hosting the service"
-                                               fileName="/perl/"/>
-                            <con:sensitiveFile description="May tell what type of web server is hosting the service"
-                                               fileName="/phpBB/phpinfo.php"/>
-                            <con:sensitiveFile description="May tell what type of web server is hosting the service"
-                                               fileName="/weblogic"/>
-                            <con:sensitiveFile description="May tell what type of web server is hosting the service"
-                                               fileName="/wp-admin/wp-login.php"/>
-                            <con:sensitiveFile description="May tell what type of web server is hosting the service"
-                                               fileName="/wp-content/debug.log"/>
-                            <con:sensitiveFile description="May tell what type of web server is hosting the service"
-                                               fileName="/WEB-INF/web.xml"/>
-                            <con:sensitiveFile description="May tell what type of web server is hosting the service"
-                                               fileName="/iisadmin/"/>
-                            <con:sensitiveFile description="May tell what type of web server is hosting the service"
-                                               fileName="/iissamples/"/>
-                            <con:sensitiveFile description="May tell what type of web server is hosting the service"
-                                               fileName="/index.jsp"/>
-                            <con:sensitiveFile description="May tell what type of web server is hosting the service"
-                                               fileName="/index.php"/>
-                            <con:sensitiveFile description="May tell what type of web server is hosting the service"
-                                               fileName="/index.html.bak"/>
-                            <con:sensitiveFile description="May tell what type of web server is hosting the service"
-                                               fileName="/index.html.old"/>
-                            <con:sensitiveFile description="May tell what type of web server is hosting the service"
-                                               fileName="/index.html~"/>
-                            <con:sensitiveFile description="May tell what type of web server is hosting the service"
-                                               fileName="/manager"/>
-                            <con:sensitiveFile description="May exist if Ruby on Rails is used on the server"
-                                               fileName="/config/database.yml"/>
-                            <con:sensitiveFile description="May exist if Ruby on Rails is used on the server"
-                                               fileName="/config/initializers/secret_token.rb"/>
-                            <con:sensitiveFile description="May exist if Ruby on Rails is used on the server"
-                                               fileName="/db/seeds.rb"/>
-                            <con:sensitiveFile description="May exist if Ruby on Rails is used on the server"
-                                               fileName="/db/development.sqlite3"/>
+                            <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htaccess"/>
+                            <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htaccess.bak"/>
+                            <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htaccess.old"/>
+                            <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/htaccess.txt"/>
+                            <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htaccess~"/>
+                            <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htpasswd"/>
+                            <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htpasswd.bak"/>
+                            <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htpasswd.old"/>
+                            <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htpasswd~"/>
+                            <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.bash_history"/>
+                            <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.bashrc"/>
+                            <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.history"/>
+                            <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.profile"/>
+                            <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.mysql_history"/>
+                            <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/~root"/>
+                            <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.git/config"/>
+                            <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.git/HEAD"/>
+                            <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.git/index"/>
+                            <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.svn/entries"/>
+                            <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.svn/wc.db"/>
+                            <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/pccsmysqladm/incs/dbconnect.inc"/>
+                            <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/perl/"/>
+                            <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/phpBB/phpinfo.php"/>
+                            <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/weblogic"/>
+                            <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/wp-admin/wp-login.php"/>
+                            <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/wp-content/debug.log"/>
+                            <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/WEB-INF/web.xml"/>
+                            <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/iisadmin/"/>
+                            <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/iissamples/"/>
+                            <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.jsp"/>
+                            <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.php"/>
+                            <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.html.bak"/>
+                            <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.html.old"/>
+                            <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.html~"/>
+                            <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/manager"/>
+                            <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/config/database.yml"/>
+                            <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/config/initializers/secret_token.rb"/>
+                            <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/db/seeds.rb"/>
+                            <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/db/development.sqlite3"/>
                         </con:config>
-                        <con:assertion type="Sensitive Files Exposure Assertion"
-                                       id="ae94184c-1bcc-4da8-a802-2ad5e462468c" name="Sensitive Files Exposure"/>
+                        <con:assertion type="Sensitive Files Exposure Assertion" id="ae94184c-1bcc-4da8-a802-2ad5e462468c" name="Sensitive Files Exposure"/>
                         <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                         <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                         <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -661,17 +572,13 @@
                             <con:delay>100</con:delay>
                         </con:executionStrategy>
                     </con:testStepSecurityProScan>
-                    <con:testStepSecurityProScan type="WeakAuthenticationScan" name="Weak Authentication"
-                                                 id="e136279d-1d43-40ed-a955-cfe3074f2b41" applyForFailedStep="false"
-                                                 disabled="false" runOnlyOnce="true">
+                    <con:testStepSecurityProScan type="WeakAuthenticationScan" name="Weak Authentication" id="e136279d-1d43-40ed-a955-cfe3074f2b41" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
                         <con:settings/>
                         <con:config xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                        <con:assertion type="WeakPassword" id="16c09788-98ae-4724-b07e-f36201ddd0d1"
-                                       name="Weak Password Detection">
+                        <con:assertion type="WeakPassword" id="16c09788-98ae-4724-b07e-f36201ddd0d1" name="Weak Password Detection">
                             <con:configuration/>
                         </con:assertion>
-                        <con:assertion type="BasicAuth" id="6962de65-ae71-434c-84ed-3fcce9b126e5"
-                                       name="Basic Authentication Detection"/>
+                        <con:assertion type="BasicAuth" id="6962de65-ae71-434c-84ed-3fcce9b126e5" name="Basic Authentication Detection"/>
                         <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                         <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                         <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -686,24 +593,19 @@
             <con:tagId>abe9acd0-5564-4873-988e-7a4d6d1ea46b</con:tagId>
             <con:tagId>fa2a3149-30a4-445b-beec-ff6e5835e8db</con:tagId>
         </con:testCase>
-        <con:testCase id="83358f0a-b327-47bd-8be4-4767acc250e5" discardOkResults="true" failOnError="true"
-                      failTestCaseOnErrors="true" keepSession="false" name="The One With Failing Assertion"
-                      searchProperties="true" timeout="0">
+        <con:testCase id="83358f0a-b327-47bd-8be4-4767acc250e5" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="The One With Failing Assertion" searchProperties="true" timeout="0">
             <con:settings/>
             <con:testStep type="restrequest" name="Request 1" id="efa044c6-5f4a-4d83-9273-1ec908787fb9">
                 <con:settings/>
-                <con:config service="http://localhost:1234" resourcePath="" methodName="" xsi:type="con:RestRequestStep"
-                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                    <con:restRequest name="Request 1" id="8b5061d1-caa1-47b3-9665-9d0b908e24fe"
-                                     mediaType="application/json">
+                <con:config service="http://localhost:1234" resourcePath="" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Request 1" id="8b5061d1-caa1-47b3-9665-9d0b908e24fe" mediaType="application/json">
                         <con:settings>
                             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
                         </con:settings>
                         <con:endpoint>http://localhost:1234</con:endpoint>
                         <con:request/>
                         <con:originalUri>http://localhost/</con:originalUri>
-                        <con:assertion type="Valid HTTP Status Codes" id="7ad86c41-5ed3-4c11-9822-c3ac8863b87b"
-                                       name="Valid HTTP Status Codes">
+                        <con:assertion type="Valid HTTP Status Codes" id="7ad86c41-5ed3-4c11-9822-c3ac8863b87b" name="Valid HTTP Status Codes">
                             <con:settings/>
                             <con:configuration>
                                 <codes>123</codes>
